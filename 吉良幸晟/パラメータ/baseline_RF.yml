@@ -1,0 +1,5 @@
+datasets: ["ricoh", "toshiba_7OSUGI", "toshiba"]
+window_size: 5
+models: "RandomForestClassifier"
+class_weight: null
+seeds: 10
