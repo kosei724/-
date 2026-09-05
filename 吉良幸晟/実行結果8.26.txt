@@ -1,0 +1,182 @@
+python count_labeled_play.py
+
+# #Toshiba(7OSUGI)
+#df_gnss = pd.read_csv('./試合データセット/GPSファイル/gnss_タグ付け_Toshiba_7OSUGI.csv')
+#df_accelerometer = pd.read_csv('./試合データセット/加速度ファイル/accelerometer_タグ付け_Toshiba_7OSUGI.csv')
+
+
+PS D:\吉良幸晟> python count_labeled_play.py
+D:\吉良幸晟\count_labeled_play.py:25: DtypeWarning: Columns (0,18,19,20) have mixed types. Specify dtype option on import or set low_memory=False.
+  df_accelerometer = pd.read_csv('./試合データセット/加速度ファイル/accelerometer_タグ付け_Toshiba_7OSUGI.csv')
+      Timestamp  Seconds Unnamed: 2  Velocity  Acceleration  ...  HDOP  #Sats  activity  at/df  position
+0       31:24.0      0.0        NaN      0.00 -2.090000e-07  ...  2.27      4       NaN    NaN       NaN
+1       31:24.1      0.1        NaN      0.00 -1.860000e-07  ...  2.27      4       NaN    NaN       NaN
+2       31:24.2      0.2        NaN      0.00 -1.570000e-07  ...  2.27      4       NaN    NaN       NaN
+3       31:24.3      0.3        NaN      0.00 -1.250000e-07  ...  2.27      4       NaN    NaN       NaN
+4       31:24.4      0.4        NaN      0.00 -9.480000e-08  ...  2.27      4       NaN    NaN       NaN
+...         ...      ...        ...       ...           ...  ...   ...    ...       ...    ...       ...
+86394   55:23.4   8639.4        NaN      0.06 -1.326843e-01  ...  1.11      8       NaN    NaN       NaN
+86395   55:23.5   8639.5        NaN      0.06 -1.326843e-01  ...  1.11      8       NaN    NaN       NaN
+86396   55:23.6   8639.6        NaN      0.06 -1.326843e-01  ...  1.11      8       NaN    NaN       NaN
+86397   55:23.7   8639.7        NaN      0.06 -1.326843e-01  ...  1.11      8       NaN    NaN       NaN
+86398   55:23.8   8639.8        NaN      0.06 -1.326843e-01  ...  1.11      8       NaN    NaN       NaN
+[86399 rows x 16 columns]
+                         Period   Ticks Unnamed: 2  ... activity at/df  position
+0       Game_Starter_First Half       0        NaN  ...      NaN   NaN       NaN
+1       Game_Starter_First Half       1        NaN  ...      NaN   NaN       NaN
+2       Game_Starter_First Half       2        NaN  ...      NaN   NaN       NaN
+3       Game_Starter_First Half       3        NaN  ...      NaN   NaN       NaN
+4       Game_Starter_First Half       4        NaN  ...      NaN   NaN       NaN
+...                         ...     ...        ...  ...      ...   ...       ...
+863893                      NaN  863893        NaN  ...      NaN   NaN       NaN
+863894                      NaN  863894        NaN  ...      NaN   NaN       NaN
+863895                      NaN  863895        NaN  ...      NaN   NaN       NaN
+863896                      NaN  863896        NaN  ...      NaN   NaN       NaN
+863897                      NaN  863897        NaN  ...      NaN   NaN       NaN
+[863898 rows x 21 columns]
+Timestamp
+Seconds
+Unnamed: 2
+Velocity
+Acceleration
+Odometer
+Latitude
+Longitude
+Heart Rate
+Player Load
+Positional Quality (%)
+HDOP
+#Sats
+activity
+at/df
+position
+GNSSデータ:
+{'scrum': 14, 'contact_support_1': 14, 'maul': 4, 'tackle_success': 8, 'contact_support_2': 7, 'lineout_lifter': 1, 'tackle_mistake': 3, 'carry': 2}
+加速度データ:
+{'scrum': 14, 'contact_support': 21, 'maul': 4, 'tackle': 11, 'lineout_lifter': 1, 'carry': 2}　
+
+
+
+#Ricoh
+df_gnss = pd.read_csv('./試合データセット/GPSファイル/gnss_タグ付け_Ricoh.csv')
+df_accelerometer = pd.read_csv('./試合データセット/加速度ファイル/accelerometer_タグ付け_Ricoh.csv')
+
+
+PS C:\Users\724ko\OneDrive - 同志社大学\吉良幸晟> python count_labeled_play.py
+C:\Users\724ko\OneDrive - 同志社大学\吉良幸晟\count_labeled_play.py:16: DtypeWarning: Columns (14,15,16) have mixed types. Specify dtype option on import or set low_memory=False.
+  df_gnss = pd.read_csv('./試合データセット/GPSファイル/gnss_タグ付け_Ricoh.csv')
+C:\Users\724ko\OneDrive - 同志社大学\吉良幸晟\count_labeled_play.py:17: DtypeWarning: Columns (0,18,19,20) have mixed types. Specify dtype option on import or set low_memory=False.
+  df_accelerometer = pd.read_csv('./試合データセット/加速度ファイル/accelerometer_タグ付け_Ricoh.csv')
+      Timestamp Unnamed: 1  Unnamed: 2  Seconds  Velocity  Acceleration  Odometer   Latitude  ...  Heart Rate  Player Load  Positional Quality (%)  HDOP  #Sats  activity at/df position
+0       32:03.0        NaN         NaN      0.0      0.38     -0.095271      0.00  34.615339  ...           0          0.0                    45.9  1.14      7       NaN   NaN      NaN
+1       32:03.1        NaN         NaN      0.1      0.53      0.014811      0.04  34.615339  ...           0          0.0                    46.3  1.14      7       NaN   NaN      NaN
+2       32:03.2        NaN         NaN      0.2      0.61      0.196138      0.05  34.615339  ...           0          0.0                    47.9  1.14      7       NaN   NaN      NaN
+3       32:03.3        NaN         NaN      0.3      0.61      0.359107      0.05  34.615339  ...           0          0.0                    47.0  1.14      7       NaN   NaN      NaN
+4       32:03.4        NaN         NaN      0.4      0.56      0.441644      0.05  34.615339  ...           0          0.0                    46.1  1.14      7       NaN   NaN      NaN
+...         ...        ...         ...      ...       ...           ...       ...        ...  ...         ...          ...                     ...   ...    ...       ...   ...      ...
+85075   53:50.5        NaN         NaN   8507.5      0.66     -0.554716   7465.46  34.615533  ...           0        921.4                     0.0  1.85      5       NaN   NaN      NaN
+85076   53:50.6        NaN         NaN   8507.6      0.66     -0.554716   7465.46  34.615533  ...           0        921.4                     0.0  1.85      5       NaN   NaN      NaN
+85077   53:50.7        NaN         NaN   8507.7      0.66     -0.554716   7465.46  34.615533  ...           0        921.4                     0.0  1.85      5       NaN   NaN      NaN
+85078   53:50.8        NaN         NaN   8507.8      0.66     -0.554716   7465.46  34.615533  ...           0        921.4                     0.0  1.85      5       NaN   NaN      NaN
+85079   53:50.9    2:21:54         NaN   8507.9      0.66     -0.554716   7465.46  34.615533  ...           0        921.4                     0.0  1.85      5       NaN   NaN      NaN
+
+[85080 rows x 17 columns]
+                         Period   Ticks Unnamed: 2      Date/Time Timestamp  ...  imuAcceleration.up  Acceleration Magnitude  activity  at/df  position
+0       Game_Starter_First Half       0        NaN  2022/1/9 6:32   00:00.0  ...            0.004942                1.006008       NaN    NaN       NaN
+1       Game_Starter_First Half       1        NaN  2022/1/9 6:32   00:00.0  ...            0.036805                1.037517       NaN    NaN       NaN
+2       Game_Starter_First Half       2        NaN  2022/1/9 6:32   00:00.0  ...            0.062474                1.063662       NaN    NaN       NaN
+3       Game_Starter_First Half       3        NaN  2022/1/9 6:32   00:00.0  ...            0.052226                1.052785       NaN    NaN       NaN
+4       Game_Starter_First Half       4        NaN  2022/1/9 6:32   00:00.0  ...            0.055356                1.056160       NaN    NaN       NaN
+...                         ...     ...        ...            ...       ...  ...                 ...                     ...       ...    ...       ...
+850728                      NaN  850728        NaN  2022/1/9 8:53   21:47.3  ...            0.000457                1.000459       NaN    NaN       NaN
+850729                      NaN  850729        NaN  2022/1/9 8:53   21:47.3  ...            0.000002                1.000012       NaN    NaN       NaN
+850730                      NaN  850730        NaN  2022/1/9 8:53   21:47.3  ...           -0.003418                0.996582       NaN    NaN       NaN
+850731                      NaN  850731        NaN  2022/1/9 8:53   21:47.3  ...            0.001412                1.001413       NaN    NaN       NaN
+850732                      NaN  850732    2:21:55  2022/1/9 8:53   21:47.3  ...           -0.002463                0.997539       NaN    NaN       NaN
+
+[850733 rows x 21 columns]
+Timestamp
+Unnamed: 1
+Unnamed: 2
+Seconds
+Velocity
+Acceleration
+Odometer
+Latitude
+Longitude
+Heart Rate
+Player Load
+Positional Quality (%)
+HDOP
+#Sats
+activity
+at/df
+position
+GNSSデータ:
+{'scrum': 7, 'contact_support_1': 7, 'tackle_success': 6, 'maul': 11, 'carry': 6, 'contact_support_2': 8, 'lineout_lifter': 2, 'jackal': 1, 'tackle_mistake': 1}
+加速度データ:
+{'scrum': 7, 'contact_support': 14, 'tackle': 8, 'maul': 12, 'carry': 6, 'lineout_lifter': 2, 'jackal': 1}
+
+
+
+#Toshiba
+df_gnss = pd.read_csv('./試合データセット/GPSファイル/gnss_タグ付け_Toshiba.csv')   
+df_accelerometer = pd.read_csv('./試合データセット/加速度ファイル/accelerometer_タグ付け_Toshiba.csv')
+
+
+
+PS C:\Users\724ko\OneDrive - 同志社大学\吉良幸晟> python count_labeled_play.py
+C:\Users\724ko\OneDrive - 同志社大学\吉良幸晟\count_labeled_play.py:12: DtypeWarning: Columns (13,14,15) have mixed types. Specify dtype option on import or set low_memory=False.
+  df_gnss = pd.read_csv('./試合データセット/GPSファイル/gnss_タグ付け_Toshiba.csv')
+C:\Users\724ko\OneDrive - 同志社大学\吉良幸晟\count_labeled_play.py:13: DtypeWarning: Columns (0,18,19,20) have mixed types. Specify dtype option on import or set low_memory=False.
+  df_accelerometer = pd.read_csv('./試合データセット/加速度ファイル/accelerometer_タグ付け_Toshiba.csv')
+      Timestamp Unnamed: 1  Seconds  Velocity  Acceleration  Odometer   Latitude   Longitude  Heart Rate  Player Load  Positional Quality (%)  HDOP  #Sats activity at/df position
+0       00:43.0        NaN      0.0      0.01      0.004182      0.00  35.672606  139.718193           0          0.0                    28.5  2.65      4      NaN   NaN      NaN
+1       00:43.1        NaN      0.1      0.05      0.015600      0.06  35.672606  139.718192           0          0.0                    27.1  2.65      4      NaN   NaN      NaN
+2       00:43.2        NaN      0.2      0.10      0.049105      0.15  35.672607  139.718192           0          0.0                    28.0  2.65      4      NaN   NaN      NaN
+3       00:43.3        NaN      0.3      0.17      0.109827      0.21  35.672607  139.718192           0          0.0                    29.5  2.65      4      NaN   NaN      NaN
+4       00:43.4    0:00:06      0.4      0.24      0.192224      0.23  35.672607  139.718191           0          0.0                    29.5  2.65      4      NaN   NaN      NaN
+...         ...        ...      ...       ...           ...       ...        ...         ...         ...          ...                     ...   ...    ...      ...   ...      ...
+66476   51:30.6        NaN   6647.6      0.89     -0.072080   7269.01  35.672638  139.718501           0        908.0                    49.0  1.01      8      NaN   NaN      NaN
+66477   51:30.7        NaN   6647.7      0.89     -0.056778   7269.10  35.672638  139.718502           0        908.0                    48.1  1.01      8      NaN   NaN      NaN
+66478   51:30.8        NaN   6647.8      0.89     -0.040443   7269.16  35.672638  139.718503           0        908.1                    47.5  1.01      8      NaN   NaN      NaN
+66479   51:30.9        NaN   6647.9      0.89     -0.027051   7269.25  35.672638  139.718504           0        908.1                    44.7  1.01      8      NaN   NaN      NaN
+66480   51:31.0        NaN   6648.0      0.87     -0.021448   7269.31  35.672637  139.718504           0        908.1                    44.0  1.01      8      NaN   NaN      NaN
+
+[66481 rows x 16 columns]
+                          Period   Ticks Unnamed: 2        Date/Time Timestamp  ...  imuAcceleration.up  Acceleration Magnitude  activity  at/df  position
+0        Game_Starter_First Half       0        NaN  2022/4/22 10:00   00:00.0  ...            0.051908                1.076814       NaN    NaN       NaN
+1        Game_Starter_First Half       1        NaN  2022/4/22 10:00   00:00.0  ...           -0.026613                0.985368       NaN    NaN       NaN
+2        Game_Starter_First Half       2        NaN  2022/4/22 10:00   00:00.0  ...           -0.043668                0.964086       NaN    NaN       NaN
+3        Game_Starter_First Half       3        NaN  2022/4/22 10:00   00:00.0  ...           -0.054899                0.955710       NaN    NaN       NaN
+4        Game_Starter_First Half       4        NaN  2022/4/22 10:00   00:00.0  ...           -0.060675                0.952704       NaN    NaN       NaN
+...                          ...     ...        ...              ...       ...  ...                 ...                     ...       ...    ...       ...
+664796  Game_Starter_Second Half  664796        NaN  2022/4/22 11:51   50:48.0  ...           -0.003908                1.000654       NaN    NaN       NaN
+664797  Game_Starter_Second Half  664797        NaN  2022/4/22 11:51   50:48.0  ...           -0.014780                0.991430       NaN    NaN       NaN
+664798  Game_Starter_Second Half  664798        NaN  2022/4/22 11:51   50:48.0  ...           -0.009170                0.995115       NaN    NaN       NaN
+664799  Game_Starter_Second Half  664799        NaN  2022/4/22 11:51   50:48.0  ...           -0.000056                1.003450       NaN    NaN       NaN
+664800  Game_Starter_Second Half  664800        NaN  2022/4/22 11:51   50:48.0  ...           -0.000945                1.003424       NaN    NaN       NaN
+
+[664801 rows x 21 columns]
+Timestamp
+Unnamed: 1
+Seconds
+Velocity
+Acceleration
+Odometer
+Latitude
+Longitude
+Heart Rate
+Player Load
+Positional Quality (%)
+HDOP
+#Sats
+activity
+at/df
+position
+GNSSデータ:
+{'scrum': 18, 'contact_support_1': 9, 'lineout_lifter': 3, 'contact_support_2': 2, 'Maul': 1, 'tackle_success': 5, 'tackle_mistake': 3, 'maul': 2}
+加速度データ:
+{'scrum': 18, 'contact_support': 11, 'lineout_lifter': 3, 'maul': 3, 'tackle': 8}
+
+
